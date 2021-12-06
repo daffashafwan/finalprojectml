@@ -26,9 +26,10 @@ def predict_img(path):
 
     # load model
     labels = ['pubescent bamboo', 'Chinese horse chestnut', 'Anhui Barberry', 'Chinese redbud', 'true indigo', 'Japanese maple', 'Nanmu', 'castor aralia', 'Chinese cinnamon', 'goldenrain tree', 'Big-fruited Holly', 'Japanese cheesewood', 'wintersweet', 'camphortree', 'Japan Arrowwood', 'sweet osmanthus', 'deodar', 'ginkgo, maidenhair tree', 'Crape myrtle, Crepe myrtle', 'oleander', 'yew plum pine', 'Japanese Flowering Cherry', 'Glossy Privet', 'Chinese Toon', 'peach', 'Ford Woodlotus', 'trident maple', 'Beales barberry', 'southern magnolia', 'Canadian poplar', 'Chinese tulip tree', 'tangerine']
-    model = load_model("/app/static/model_deploy.h5")
+    target = os.path.join(APP_ROOT, 'static/')
+    model = load_model(target+"model_deploy.h5")
     # image path
-    target = "/app/temp/"
+    target = os.path.join(APP_ROOT, 'temp/')
     img_path = (target+path)    # dog
     #img_path = '/media/data/dogscats/test1/19.jpg'      # cat
     # load a single image
