@@ -9,4 +9,4 @@ name = "pypi"
 
 [requires]
 python_version = "3.8"
-web: gunicorn application:application
+web: gunicorn app:app
